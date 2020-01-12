@@ -3,11 +3,11 @@
 - name: Copy main tmux config
   copy:
     src: tmux.conf
-    dest: /home/{{user}}/.tmux.conf
+    dest: "{{ansible_env.HOME}}/.tmux.conf"
 
 - name: Copy colors
   copy:
     src: colors.tmuxtheme
-    dest: /home/{{user}}/.colors.tmuxtheme
+    dest: "{{ansible_env.HOME}}/.colors.tmuxtheme"
 
 
